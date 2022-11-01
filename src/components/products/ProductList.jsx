@@ -24,7 +24,7 @@ function ProductList() {
     console.log(productData)
 
   return (
-    <div>
+    <div className='mainData'>
         {productData && productData.map(product => {
             return (
                 <Item 

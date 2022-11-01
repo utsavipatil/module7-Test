@@ -5,7 +5,7 @@ import './Products.css'
 function products() {
   return (
     <div>
-        <img className='container-fluid' src='src\components\container-fluid.jpg'/>
+        <img className='container-fluid' src='src\components\container-fluid.jpeg'/>
         <div className='title'>Products</div>
         <div>
           <ProductList/>

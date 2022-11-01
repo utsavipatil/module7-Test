@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+.loginText {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.2px;
+    color: #23A6F0;
+}
+.navbar-right{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 5%;
+}
+.loginIcon{
+    margin-right: 5px;
+}
+.loginText , .serachIcon{
+    margin-right: 2%;
+}
+.likeIcon{
+    margin-left: 2%;
+    margin-right: 5px;
+}
+.cartIcon{
+    margin-right: 5px;
+}
+.navbar-brand{
+    margin-left: 5%;
+    position: absolute;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+    color: #252B42;
+}
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    margin-left: 25%;
+}
+.home , .shop, .about , .blog , .contact , .pages{
+    margin-right: 5%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #737373;
+}

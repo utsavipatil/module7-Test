@@ -1,0 +1,9 @@
+.mainData{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+.container-fluid{
+    margin-top: 30px;
+    margin-left: 100px;
+}

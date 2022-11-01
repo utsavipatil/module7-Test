@@ -2,9 +2,39 @@ import React from 'react'
 import './Footer.css'
 
 function Footer() {
+
+  const [email, setEmail] = React.useState('')
+
+  //POST request on mail
+  const handleSubmitMail = () => {
+    fetch('https://accio-moduletest-mail-default-rtdb.asia-southeast1.firebasedatabase.app/mail.json',
+      {
+        method : 'POST',
+        headers : {
+          'Content-Type' : 'application/json'
+        },
+        body : JSON.stringify({
+            customerMail : email
+        })
+      }
+    )
+    .then(response => response.json())
+    .then(data => {
+      // console.log(data)
+      setEmail('');
+      alert('Your mail saved in our database Successfully!')
+    })
+  }
+
   return (
     <div className='footer'>
-
+      <div className='accioJob'>
+        <h3>AccioJob</h3>
+        <img className='fb' src='src\components\footer\facebook.svg'/>
+        <img className='instra' src='src\components\footer\instragram.svg'/>
+        <img className='twitter' src='src\components\footer\twitter.svg'/>
+      </div>
+      <hr/>
       <div className='companyInfo'>
           <div className='c1'>
             <h5>Company Info</h5>
@@ -38,10 +68,10 @@ function Footer() {
             <h5>Get In Touch</h5>
             <div className='input'>
               <div className='part1'>
-                <input type='text' placeholder='Your Email' />
+                <input value={email} onChange={(e) => setEmail(e.target.value)} type='text' placeholder='Your Email' />
               </div>
               <div className='part2'>
-                <button type='submit'>Subscribe</button>
+                <button onClick={handleSubmitMail} type='submit'>Subscribe</button>
               </div>
             </div>
             <p>Lorem impsum dolor amit</p>

@@ -1,7 +1,11 @@
 import React from 'react'
 import './NavigationBar.css'
+import {AppContext} from '../../Context'
 
 function NavigationBar() {
+
+  const {cartCount} = React.useContext(AppContext)
+
   return (
     <div className='navbar-light'>
         <div className='collapse navbar-collapse'>
@@ -17,7 +21,7 @@ function NavigationBar() {
             <div className='navbar-right'>
                 {1}
                 <img className='likeIcon' src='src\components\Header\like.svg'/>
-                {1}
+                {cartCount}
                 <img className='cartIcon' src='src\components\Header\cart.svg'/>
                 <img className='serachIcon' src='src\components\Header\search.svg'/>
                 <div className='loginText'> Login / Register</div>
